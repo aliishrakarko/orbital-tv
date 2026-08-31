@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -10,11 +9,10 @@ android {
 
     defaultConfig {
         applicationId = "com.premium.tvbrowser"
-        minSdk = 21 // Android TV 10 is API 29 but allow lower, we handle
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -32,7 +30,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
-
     packaging { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
 }
 
