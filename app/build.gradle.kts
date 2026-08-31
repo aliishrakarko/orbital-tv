@@ -1,12 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
     namespace = "com.premium.tvbrowser"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "com.premium.tvbrowser"
         minSdk = 21
@@ -15,10 +15,8 @@ android {
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildFeatures { compose = true }
     composeOptions { kotlinCompilerExtensionVersion = "1.5.8" }
-
     buildTypes {
         release {
             isMinifyEnabled = true
